@@ -20,6 +20,7 @@ var num = 5
 var basicTime = 100000
 
 func main() {
+	fmt.Println("hi")
 	avg := 0.0
 	for k := 0; k < outerRepeat; k++ {
 		rand.Seed(time.Now().Unix())
@@ -31,7 +32,7 @@ func main() {
 			// 录入第一次玉米攻击时机
 			itv := make([]int, 0)
 			for j := 0; j < num; j++ {
-				itv = append(itv, rand.Intn(15)+286)
+				itv = append(itv, rand.Intn(rand.Intn(15)+286))
 			}
 			sort.Ints(itv)
 
